@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trauma Clarity & Therapy Fit Questionnaire</title>
+    <meta
+      name="description"
+      content="A Singapore-grounded multiple choice questionnaire for trauma clarity, therapy fit, ADHD-friendly support needs, and practical next steps."
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Singapore-grounded therapy reflection</p>
+          <h1 id="appTitle">Trauma Clarity & Therapy Fit Questionnaire</h1>
+        </div>
+        <p id="privacyNote" class="privacy-note">Your answers stay in this browser.</p>
+      </header>
+
+      <section id="intro" class="panel intro-panel">
+        <div class="intro-copy">
+          <h2>This is not a diagnosis. It is a mirror.</h2>
+          <p>
+            The aim is to help you understand what is actually happening: fear of bumping into someone,
+            avoidance, unresolved meaning, ADHD-related memory gaps, difficulty asking for help, or relationship repair.
+          </p>
+          <p>
+            You will get a short, practical result with therapy focus areas, questions to ask a therapist,
+            and Singapore services or directories to check.
+          </p>
+        </div>
+        <div class="intro-card">
+          <h3>What this is designed to say clearly</h3>
+          <p>
+            You are not being dramatic. Your system may be trying to protect you. The question is whether
+            that protection strategy is now making your world smaller.
+          </p>
+          <button id="startButton" class="primary-button" type="button">Start questionnaire</button>
+        </div>
+      </section>
+
+      <section id="app" class="question-section" hidden>
+        <div class="progress-wrap">
+          <div class="question-meta">
+            <span id="questionCounter">Question 1 of 20</span>
+          </div>
+          <div class="progress-track" aria-hidden="true">
+            <div id="progressFill" class="progress-fill"></div>
+          </div>
+        </div>
+
+        <section id="questionCard" class="panel question-card" aria-live="polite"></section>
+
+        <nav class="nav-buttons" aria-label="Question navigation">
+          <button id="previousButton" class="secondary-button" type="button">Previous</button>
+          <button id="nextButton" class="primary-button" type="button">Next</button>
+        </nav>
+      </section>
+
+      <section id="results" class="results-section" hidden>
+        <div id="resultContent"></div>
+        <div class="result-actions">
+          <button id="copyBriefButton" class="secondary-button" type="button">Copy therapist brief</button>
+          <button id="printButton" class="secondary-button" type="button">Print / save PDF</button>
+          <button id="restartButton" class="primary-button" type="button">Restart</button>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

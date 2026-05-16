@@ -1,0 +1,1352 @@
+{
+  "id": "sg_trauma_clarity_therapy_match_v1",
+  "title": "Trauma Clarity & Therapy Fit Questionnaire",
+  "version": "1.0.0",
+  "locale": "Singapore",
+  "estimatedTimeMinutes": 12,
+  "format": "single-choice multiple choice",
+  "privacyNote": "Your answers stay in this browser. This page does not send answers to a server.",
+  "clinicalDisclaimer": "This questionnaire is not a diagnosis, crisis assessment, or substitute for professional care. It is a practical reflection tool to help clarify patterns, therapy needs, and next steps.",
+  "emergencyNote": "If you feel at risk of self-harm, harming someone else, or unable to stay safe, contact emergency services, Samaritans of Singapore at 1767, national mindline 1771, or go to the nearest emergency department.",
+  "culturalPositioning": {
+    "context": "Singapore",
+    "principles": [
+      "Respect privacy, face-saving, family/social overlap, and the instinct to handle difficult things quietly.",
+      "Acknowledge that Singapore can feel small: MRT routes, malls, workplaces, nightlife areas, mutual friends, and familiar neighbourhoods can all become emotionally loaded.",
+      "Assume the user can talk about feelings when invited safely, but may not initiate help or state needs clearly.",
+      "Frame help-seeking as practical self-leadership, not weakness.",
+      "Use language that is warm, plain, direct, and non-fluffy."
+    ]
+  },
+  "scoringDimensions": {
+    "safety_risk": "Current safety, crisis, or severe destabilisation signals.",
+    "trauma_activation": "Intensity of nervous system response when reminded of the person/event.",
+    "avoidance": "Degree to which life is shrinking to prevent reminders or accidental encounters.",
+    "unfinished_meaning": "Need to understand the story, timeline, guilt, shame, or unresolved meaning.",
+    "relationship_repair": "Need to address secrecy, betrayal, trust, and current relationship impact.",
+    "adhd_support": "Need for structure, memory aids, written plans, and between-session accountability.",
+    "therapy_fit": "Need for a more active, structured, skills-based therapist.",
+    "readiness_for_processing": "Whether the user may be ready for trauma processing versus stabilisation first.",
+    "help_seeking_barrier": "Difficulty asking for support, stating needs, or letting others know when things are bad.",
+    "small_city_threat_map": "How much Singapore itself has become mentally mapped as unsafe because of possible accidental encounters."
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "section": "current_safety",
+      "question": "When you think about this person moving back to Singapore, what feels most true right now?",
+      "options": [
+        {
+          "label": "I feel uncomfortable, but I can still function.",
+          "scores": {
+            "trauma_activation": 1
+          }
+        },
+        {
+          "label": "I feel anxious enough that it changes where I go or what I do.",
+          "scores": {
+            "trauma_activation": 2,
+            "avoidance": 2
+          }
+        },
+        {
+          "label": "I feel panicky, trapped, or like Singapore no longer feels safe.",
+          "scores": {
+            "trauma_activation": 3,
+            "avoidance": 3,
+            "safety_risk": 1,
+            "small_city_threat_map": 2
+          }
+        },
+        {
+          "label": "I feel like I might hurt myself, lose control, or cannot stay safe.",
+          "scores": {
+            "safety_risk": 5
+          },
+          "flag": "urgent_support"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "section": "body_response",
+      "question": "What happens in your body when you imagine bumping into him?",
+      "options": [
+        {
+          "label": "Mostly thoughts; my body stays fairly calm.",
+          "scores": {
+            "trauma_activation": 0
+          }
+        },
+        {
+          "label": "Tension, faster heartbeat, stomach drop, or restlessness.",
+          "scores": {
+            "trauma_activation": 1
+          }
+        },
+        {
+          "label": "Panic-like symptoms, freezing, nausea, shaking, or wanting to escape.",
+          "scores": {
+            "trauma_activation": 3
+          }
+        },
+        {
+          "label": "I shut down, dissociate, go blank, or feel unreal.",
+          "scores": {
+            "trauma_activation": 3,
+            "readiness_for_processing": -2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "section": "avoidance",
+      "question": "How much are you avoiding places, events, or normal routines because of this?",
+      "options": [
+        {
+          "label": "Not much; I still do most things.",
+          "scores": {
+            "avoidance": 0
+          }
+        },
+        {
+          "label": "A little; I check or plan more than usual.",
+          "scores": {
+            "avoidance": 1,
+            "small_city_threat_map": 1
+          }
+        },
+        {
+          "label": "A lot; I avoid areas, people, or situations where he might be.",
+          "scores": {
+            "avoidance": 3,
+            "small_city_threat_map": 2
+          }
+        },
+        {
+          "label": "My world feels smaller because of it.",
+          "scores": {
+            "avoidance": 4,
+            "trauma_activation": 2,
+            "small_city_threat_map": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "section": "trigger_clarity",
+      "question": "Which part feels most distressing?",
+      "options": [
+        {
+          "label": "Seeing him unexpectedly.",
+          "scores": {
+            "trauma_activation": 2,
+            "avoidance": 1,
+            "small_city_threat_map": 1
+          }
+        },
+        {
+          "label": "What he represents from the past.",
+          "scores": {
+            "unfinished_meaning": 2,
+            "trauma_activation": 1
+          }
+        },
+        {
+          "label": "Guilt, shame, or confusion about what happened.",
+          "scores": {
+            "unfinished_meaning": 3,
+            "relationship_repair": 1
+          }
+        },
+        {
+          "label": "How this affects my current relationship.",
+          "scores": {
+            "relationship_repair": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "section": "memory_timeline",
+      "question": "How clear is your memory of the timeline and what happened?",
+      "options": [
+        {
+          "label": "Very clear; I can explain the sequence honestly.",
+          "scores": {
+            "unfinished_meaning": 0
+          }
+        },
+        {
+          "label": "Somewhat clear, but there are gaps.",
+          "scores": {
+            "unfinished_meaning": 1,
+            "adhd_support": 1
+          }
+        },
+        {
+          "label": "Unclear; I avoid reconstructing it because it feels overwhelming.",
+          "scores": {
+            "unfinished_meaning": 3,
+            "avoidance": 2,
+            "adhd_support": 1
+          }
+        },
+        {
+          "label": "I am not sure whether I forgot, blocked it out, or do not want to face it.",
+          "scores": {
+            "unfinished_meaning": 4,
+            "avoidance": 2,
+            "adhd_support": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "section": "meaning_making",
+      "question": "What question keeps looping the most?",
+      "options": [
+        {
+          "label": "Why did this affect me so much?",
+          "scores": {
+            "unfinished_meaning": 2
+          }
+        },
+        {
+          "label": "What exactly happened and what did it mean?",
+          "scores": {
+            "unfinished_meaning": 3
+          }
+        },
+        {
+          "label": "What does this say about me?",
+          "scores": {
+            "unfinished_meaning": 2,
+            "trauma_activation": 1
+          }
+        },
+        {
+          "label": "How do I stop this from damaging my current relationship?",
+          "scores": {
+            "relationship_repair": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "section": "relationship_impact",
+      "question": "How much does secrecy or cheating from that period still affect the current relationship?",
+      "options": [
+        {
+          "label": "It has been discussed and mostly repaired.",
+          "scores": {
+            "relationship_repair": 0
+          }
+        },
+        {
+          "label": "It comes up sometimes, but we can talk about it.",
+          "scores": {
+            "relationship_repair": 1
+          }
+        },
+        {
+          "label": "It is unresolved and creates mistrust, defensiveness, or shutdown.",
+          "scores": {
+            "relationship_repair": 3
+          }
+        },
+        {
+          "label": "It feels like two separate issues: trauma from him and betrayal in our relationship.",
+          "scores": {
+            "relationship_repair": 4,
+            "unfinished_meaning": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "section": "current_partner_role",
+      "question": "What kind of support from your current partner would help most?",
+      "options": [
+        {
+          "label": "Calm reassurance without pressure.",
+          "scores": {
+            "therapy_fit": 1
+          }
+        },
+        {
+          "label": "Help making a plan for possible encounters.",
+          "scores": {
+            "avoidance": 1,
+            "adhd_support": 1
+          }
+        },
+        {
+          "label": "Structured conversations about what happened and what I need now.",
+          "scores": {
+            "relationship_repair": 2,
+            "unfinished_meaning": 1
+          }
+        },
+        {
+          "label": "Less discussion with my partner and more work with a therapist first.",
+          "scores": {
+            "therapy_fit": 2,
+            "readiness_for_processing": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "section": "therapy_experience",
+      "question": "What is missing from your current therapy?",
+      "options": [
+        {
+          "label": "Nothing major; I mostly need patience.",
+          "scores": {
+            "therapy_fit": 0
+          }
+        },
+        {
+          "label": "Clear goals and a treatment plan.",
+          "scores": {
+            "therapy_fit": 3,
+            "adhd_support": 1
+          }
+        },
+        {
+          "label": "Concrete tools for panic, avoidance, or intrusive thoughts.",
+          "scores": {
+            "therapy_fit": 3,
+            "trauma_activation": 1
+          }
+        },
+        {
+          "label": "A therapist who directly understands trauma, ADHD, and relationship betrayal.",
+          "scores": {
+            "therapy_fit": 4,
+            "adhd_support": 2,
+            "relationship_repair": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "section": "therapy_style",
+      "question": "Which therapy style sounds most useful right now?",
+      "options": [
+        {
+          "label": "Skills first: grounding, emotional regulation, and practical coping plans.",
+          "scores": {
+            "therapy_fit": 2,
+            "readiness_for_processing": -1
+          },
+          "suggestedModalities": [
+            "DBT-informed skills",
+            "Somatic grounding",
+            "Trauma-informed stabilisation"
+          ]
+        },
+        {
+          "label": "Process the trauma directly so it stops feeling so alive.",
+          "scores": {
+            "readiness_for_processing": 3,
+            "trauma_activation": 1
+          },
+          "suggestedModalities": [
+            "EMDR",
+            "Trauma-focused CBT",
+            "CPT",
+            "Prolonged Exposure"
+          ]
+        },
+        {
+          "label": "Understand the story, beliefs, guilt, and meaning.",
+          "scores": {
+            "unfinished_meaning": 3,
+            "readiness_for_processing": 1
+          },
+          "suggestedModalities": [
+            "Cognitive Processing Therapy",
+            "Trauma-focused CBT",
+            "Schema therapy"
+          ]
+        },
+        {
+          "label": "Repair the current relationship and rebuild trust.",
+          "scores": {
+            "relationship_repair": 4
+          },
+          "suggestedModalities": [
+            "Couples therapy",
+            "Emotionally Focused Therapy",
+            "Gottman-informed couples therapy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "section": "adhd_needs",
+      "question": "Because of ADHD, what would make therapy easier to follow?",
+      "options": [
+        {
+          "label": "I do not need ADHD-specific support.",
+          "scores": {
+            "adhd_support": 0
+          }
+        },
+        {
+          "label": "Written summaries after each session.",
+          "scores": {
+            "adhd_support": 2
+          }
+        },
+        {
+          "label": "Clear homework, reminders, and simple tracking.",
+          "scores": {
+            "adhd_support": 3
+          }
+        },
+        {
+          "label": "A visual timeline, shared notes, and repeated review because I lose the thread.",
+          "scores": {
+            "adhd_support": 4,
+            "unfinished_meaning": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "section": "encounter_plan",
+      "question": "If you bumped into him tomorrow, what would probably happen?",
+      "options": [
+        {
+          "label": "I could stay calm and leave if needed.",
+          "scores": {
+            "trauma_activation": 0,
+            "avoidance": 0
+          }
+        },
+        {
+          "label": "I would feel anxious but could follow a plan.",
+          "scores": {
+            "trauma_activation": 1,
+            "avoidance": 1
+          }
+        },
+        {
+          "label": "I might freeze, panic, spiral, or lose the rest of the day.",
+          "scores": {
+            "trauma_activation": 3,
+            "avoidance": 2
+          }
+        },
+        {
+          "label": "I have no plan and feel afraid of what I might do or feel.",
+          "scores": {
+            "trauma_activation": 4,
+            "avoidance": 3,
+            "safety_risk": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "section": "closure_definition",
+      "question": "What would 'closure' actually mean?",
+      "options": [
+        {
+          "label": "I can live my life without scanning for him.",
+          "scores": {
+            "avoidance": 2,
+            "small_city_threat_map": 1
+          }
+        },
+        {
+          "label": "I understand what happened and stop looping over it.",
+          "scores": {
+            "unfinished_meaning": 3
+          }
+        },
+        {
+          "label": "I can see him or hear about him without my body reacting strongly.",
+          "scores": {
+            "trauma_activation": 3
+          }
+        },
+        {
+          "label": "I can be fully honest and present in my current relationship.",
+          "scores": {
+            "relationship_repair": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "section": "readiness",
+      "question": "How ready do you feel to work on this directly?",
+      "options": [
+        {
+          "label": "Not ready; I need stabilisation first.",
+          "scores": {
+            "readiness_for_processing": -3,
+            "therapy_fit": 1
+          }
+        },
+        {
+          "label": "Somewhat ready, but I need a slow and structured approach.",
+          "scores": {
+            "readiness_for_processing": 1,
+            "therapy_fit": 2
+          }
+        },
+        {
+          "label": "Ready; I want focused trauma work.",
+          "scores": {
+            "readiness_for_processing": 3,
+            "therapy_fit": 1
+          }
+        },
+        {
+          "label": "Ready, but I also need relationship repair alongside it.",
+          "scores": {
+            "readiness_for_processing": 2,
+            "relationship_repair": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "section": "therapist_selection",
+      "question": "What should the next therapist be best at?",
+      "options": [
+        {
+          "label": "Trauma processing with EMDR, CPT, trauma-focused CBT, or Prolonged Exposure.",
+          "scores": {
+            "readiness_for_processing": 3,
+            "therapy_fit": 2
+          },
+          "suggestedModalities": [
+            "EMDR",
+            "CPT",
+            "Trauma-focused CBT",
+            "Prolonged Exposure"
+          ]
+        },
+        {
+          "label": "ADHD-friendly structure and accountability.",
+          "scores": {
+            "adhd_support": 4,
+            "therapy_fit": 2
+          },
+          "suggestedModalities": [
+            "ADHD-informed therapy",
+            "Structured CBT",
+            "Coaching-supported therapy"
+          ]
+        },
+        {
+          "label": "Relationship betrayal, secrecy, and trust repair.",
+          "scores": {
+            "relationship_repair": 4,
+            "therapy_fit": 1
+          },
+          "suggestedModalities": [
+            "Couples therapy",
+            "Gottman-informed therapy",
+            "Emotionally Focused Therapy"
+          ]
+        },
+        {
+          "label": "Anxiety, grounding, panic tools, and getting life moving again.",
+          "scores": {
+            "trauma_activation": 2,
+            "avoidance": 2,
+            "therapy_fit": 2
+          },
+          "suggestedModalities": [
+            "Trauma-informed stabilisation",
+            "Grounding",
+            "Gradual exposure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "section": "singapore_context",
+      "question": "What feels hardest about him being back in Singapore?",
+      "options": [
+        {
+          "label": "Singapore feels too small. I feel like I could bump into him anywhere.",
+          "scores": {
+            "small_city_threat_map": 4,
+            "avoidance": 2,
+            "trauma_activation": 1
+          }
+        },
+        {
+          "label": "We may have overlapping places, people, or routines.",
+          "scores": {
+            "small_city_threat_map": 3,
+            "avoidance": 2
+          }
+        },
+        {
+          "label": "I worry I will lose control of my emotions if I see him.",
+          "scores": {
+            "trauma_activation": 3,
+            "small_city_threat_map": 1
+          }
+        },
+        {
+          "label": "It is less about Singapore and more about what he represents.",
+          "scores": {
+            "unfinished_meaning": 3,
+            "trauma_activation": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "section": "help_seeking",
+      "question": "When you are struggling, what do you usually do first?",
+      "options": [
+        {
+          "label": "I tell someone clearly and ask for help.",
+          "scores": {
+            "help_seeking_barrier": 0
+          }
+        },
+        {
+          "label": "I hint that I am not okay, but I do not always say what I need.",
+          "scores": {
+            "help_seeking_barrier": 2,
+            "relationship_repair": 1
+          }
+        },
+        {
+          "label": "I keep it to myself until it becomes obvious.",
+          "scores": {
+            "help_seeking_barrier": 3,
+            "avoidance": 1
+          }
+        },
+        {
+          "label": "I minimise it because I do not want to burden people or make things messy.",
+          "scores": {
+            "help_seeking_barrier": 4,
+            "unfinished_meaning": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "section": "emotional_openness",
+      "question": "Which sentence fits you best?",
+      "options": [
+        {
+          "label": "I can talk about feelings once the conversation starts.",
+          "scores": {
+            "help_seeking_barrier": 1
+          }
+        },
+        {
+          "label": "I understand my feelings, but I do not always know how to ask for what I need.",
+          "scores": {
+            "help_seeking_barrier": 3,
+            "therapy_fit": 1
+          }
+        },
+        {
+          "label": "I wait until I have the 'right' words, then sometimes say nothing.",
+          "scores": {
+            "help_seeking_barrier": 3,
+            "adhd_support": 1
+          }
+        },
+        {
+          "label": "I open up, but only after things have already built up inside me.",
+          "scores": {
+            "help_seeking_barrier": 2,
+            "trauma_activation": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "section": "hidden_pattern",
+      "question": "When you imagine asking for help, what stops you most?",
+      "options": [
+        {
+          "label": "I do not want to look weak or needy.",
+          "scores": {
+            "help_seeking_barrier": 3,
+            "unfinished_meaning": 1
+          }
+        },
+        {
+          "label": "I do not want to upset my partner or make things worse.",
+          "scores": {
+            "help_seeking_barrier": 3,
+            "relationship_repair": 2
+          }
+        },
+        {
+          "label": "I am not sure what I need, so I say nothing.",
+          "scores": {
+            "help_seeking_barrier": 4,
+            "therapy_fit": 1,
+            "adhd_support": 1
+          }
+        },
+        {
+          "label": "Part of me feels I should be over this already.",
+          "scores": {
+            "unfinished_meaning": 3,
+            "trauma_activation": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "section": "self_understanding",
+      "question": "What do you most wish someone understood without you having to explain everything?",
+      "options": [
+        {
+          "label": "I am not trying to be difficult. I am trying to feel safe.",
+          "scores": {
+            "trauma_activation": 2,
+            "help_seeking_barrier": 1
+          }
+        },
+        {
+          "label": "I do not always know what I need until later.",
+          "scores": {
+            "adhd_support": 2,
+            "help_seeking_barrier": 2
+          }
+        },
+        {
+          "label": "I feel guilty that this still affects people around me.",
+          "scores": {
+            "unfinished_meaning": 2,
+            "relationship_repair": 2
+          }
+        },
+        {
+          "label": "I want to move forward, but part of me is still bracing for impact.",
+          "scores": {
+            "trauma_activation": 2,
+            "avoidance": 2,
+            "small_city_threat_map": 1
+          }
+        }
+      ]
+    }
+  ],
+  "resultProfiles": [
+    {
+      "id": "urgent_support",
+      "priority": 1000,
+      "requiredFlags": [
+        "urgent_support"
+      ],
+      "minScores": {
+        "safety_risk": 5
+      },
+      "matchMode": "any",
+      "title": "Immediate support first",
+      "coreInsight": "The priority is safety and stabilisation, not deep trauma processing today.",
+      "heardStatement": "You do not need to solve the whole story right now. You need support around you and a plan for the next hour.",
+      "hiddenLearning": "When your system is in crisis, more analysis can make things worse. Safety comes before insight.",
+      "actions": [
+        "Contact Samaritans of Singapore at 1767 or WhatsApp CareText at 9151 1767.",
+        "Contact national mindline 1771 for round-the-clock mental health support in Singapore.",
+        "Tell a trusted person: 'I am not feeling safe being alone right now.'",
+        "Delay any confrontation, timeline work, or exposure exercises until stabilised."
+      ],
+      "therapyFocus": [
+        "Crisis support",
+        "Stabilisation",
+        "Safety planning"
+      ],
+      "resourceTags": [
+        "crisis",
+        "navigation"
+      ]
+    },
+    {
+      "id": "small_city_threat_map",
+      "priority": 900,
+      "minScores": {
+        "small_city_threat_map": 6
+      },
+      "title": "Your brain may have turned Singapore into a threat map",
+      "coreInsight": "This may not be only about him. It may be about your brain scanning familiar places for danger because Singapore feels socially and geographically small.",
+      "heardStatement": "It makes sense that you feel tense. In a small city, the fear is not just 'what if I see him?' It becomes 'where can I fully relax?'",
+      "hiddenLearning": "The problem is not that you are weak. The problem is that your safety system is overworking and using avoidance as its main strategy.",
+      "actions": [
+        "Make a two-column map: 'places I avoid' and 'places I want back'.",
+        "Rank each place from 1 to 10 for difficulty.",
+        "Start reclaiming low-difficulty places first, not the scariest ones.",
+        "Create a simple encounter script: 'I am not available for a conversation. Take care.' Then leave."
+      ],
+      "therapistBrief": "I need help with gradual exposure so Singapore stops feeling like a threat map.",
+      "therapyFocus": [
+        "Gradual exposure",
+        "Grounding",
+        "Anxiety management",
+        "Trauma-informed CBT"
+      ],
+      "resourceTags": [
+        "trauma",
+        "anxiety",
+        "directory"
+      ]
+    },
+    {
+      "id": "quiet_coper",
+      "priority": 880,
+      "minScores": {
+        "help_seeking_barrier": 7
+      },
+      "title": "You may be a quiet coper",
+      "coreInsight": "You can talk about feelings, but you may not ask for help early enough. That means people may only see the problem once you are already overwhelmed.",
+      "heardStatement": "You may not be closed off. You may simply be used to carrying things privately until they become too heavy.",
+      "hiddenLearning": "Not asking for help can look like strength from the outside, but internally it can become isolation.",
+      "actions": [
+        "Create a simple support scale from 1 to 5.",
+        "At level 3, tell someone: 'I am activated and need a calm check-in.'",
+        "At level 4, tell someone: 'I should not handle this alone today.'",
+        "Bring this pattern to therapy and ask to practise asking for help directly."
+      ],
+      "therapistBrief": "I can talk about feelings, but I do not always ask for help early. I need help stating needs clearly before I shut down or minimise things.",
+      "therapyFocus": [
+        "Assertiveness",
+        "Emotion regulation",
+        "ADHD-friendly communication scripts",
+        "Attachment-focused therapy"
+      ],
+      "resourceTags": [
+        "trauma",
+        "adhd",
+        "couples"
+      ]
+    },
+    {
+      "id": "not_just_the_person",
+      "priority": 850,
+      "minScores": {
+        "unfinished_meaning": 8,
+        "trauma_activation": 6
+      },
+      "title": "You may not be reacting only to him",
+      "coreInsight": "He may be the trigger, but the deeper fear may be returning to the emotional state, choices, secrecy, shame, or confusion from that period.",
+      "heardStatement": "This is probably not as simple as 'I do not want to see him.' It may be 'I do not want to become that version of myself again.'",
+      "hiddenLearning": "Closure may not come from contact, answers, or a perfect memory. It may come from proving to yourself that you are different now and can choose differently now.",
+      "actions": [
+        "Write two lists: 'Who I was then' and 'Who I am choosing to be now'.",
+        "Name three choices you can make now that you could not make then.",
+        "Work with a therapist on guilt, shame, responsibility, and self-trust.",
+        "Avoid seeking closure through the other person unless a therapist agrees it is safe and useful."
+      ],
+      "therapistBrief": "I need help separating facts, memory gaps, shame, and meaning. I do not want to keep looping without structure.",
+      "therapyFocus": [
+        "Cognitive Processing Therapy",
+        "Trauma-focused CBT",
+        "Schema therapy",
+        "Self-trust repair"
+      ],
+      "resourceTags": [
+        "trauma",
+        "directory"
+      ]
+    },
+    {
+      "id": "two_repairs_needed",
+      "priority": 840,
+      "minScores": {
+        "relationship_repair": 8,
+        "trauma_activation": 5
+      },
+      "title": "There may be two recoveries happening at once",
+      "coreInsight": "One recovery is from what happened with him. The other is repairing trust in your current relationship after secrecy or betrayal.",
+      "heardStatement": "It is possible to have real trauma and still need to take responsibility for the secrecy that hurt your partner. Both can be true.",
+      "hiddenLearning": "Trauma explains why something hurts. It does not automatically repair the impact on the person beside you.",
+      "actions": [
+        "Separate individual trauma therapy from relationship repair conversations.",
+        "Agree what your partner needs to feel safe now: transparency, boundaries, reassurance, or couples therapy.",
+        "Do not use memory gaps as the whole explanation. Use them as a reason to build better structure.",
+        "Create a current boundary plan about this person before any accidental encounter happens."
+      ],
+      "therapistBrief": "I need individual support for trauma and a separate structure for repairing trust in my current relationship.",
+      "therapyFocus": [
+        "Individual trauma therapy",
+        "Couples therapy",
+        "Betrayal repair",
+        "Accountability and boundaries"
+      ],
+      "resourceTags": [
+        "couples",
+        "trauma",
+        "lgbtq"
+      ]
+    },
+    {
+      "id": "structure_not_insight",
+      "priority": 820,
+      "minScores": {
+        "adhd_support": 8,
+        "therapy_fit": 6
+      },
+      "title": "You may not need more insight; you may need more structure",
+      "coreInsight": "You may already understand parts of the issue emotionally. The missing piece may be structure: written summaries, timelines, scripts, reminders, and clear next steps.",
+      "heardStatement": "If your memory or timeline gets blurry, that does not mean you are not trying. It means therapy needs to be designed for how your brain works.",
+      "hiddenLearning": "For ADHD, progress often comes less from one big breakthrough and more from externalising the work so you do not have to hold everything in your head.",
+      "actions": [
+        "Ask the therapist for a written treatment plan.",
+        "Use a shared therapy document with goals, triggers, tools, and homework.",
+        "End every session by writing: 'This week I will do one thing.'",
+        "Review the previous session at the start of the next one."
+      ],
+      "therapistBrief": "Because of ADHD, I need written structure, reminders, visual timelines, and clear homework. Otherwise I lose the thread.",
+      "therapyFocus": [
+        "ADHD-informed therapy",
+        "Structured CBT",
+        "Trauma therapy with written plans",
+        "Coaching-supported therapy"
+      ],
+      "resourceTags": [
+        "adhd",
+        "trauma",
+        "directory"
+      ]
+    },
+    {
+      "id": "stabilisation_first",
+      "priority": 780,
+      "minScores": {
+        "trauma_activation": 10
+      },
+      "maxScores": {
+        "readiness_for_processing": 1
+      },
+      "title": "Stabilisation before trauma processing",
+      "coreInsight": "Your nervous system sounds highly activated. The first goal is not closure; it is restoring enough safety and control to work effectively.",
+      "heardStatement": "You are not being dramatic. Your system is trying to protect you, but it may be stuck on high alert.",
+      "hiddenLearning": "When activation is high, going straight into the hardest memories can backfire. Skills are not a delay; they are the foundation.",
+      "actions": [
+        "Ask the therapist for a 4-session stabilisation plan before deep processing.",
+        "Build a written 'if I see him' plan: leave script, safe person to call, grounding steps, and aftercare.",
+        "Practise one grounding tool daily, not only when triggered.",
+        "Look for therapists trained in trauma-informed stabilisation, EMDR preparation, DBT-informed skills, or somatic regulation."
+      ],
+      "therapistBrief": "I need structured trauma-informed therapy. Before processing memories, I need tools for panic, avoidance, shutdown, and a plan for possible accidental encounters.",
+      "therapyFocus": [
+        "DBT-informed skills",
+        "Somatic grounding",
+        "Trauma-informed stabilisation",
+        "EMDR preparation"
+      ],
+      "resourceTags": [
+        "trauma",
+        "anxiety",
+        "directory"
+      ]
+    },
+    {
+      "id": "trauma_processing_ready",
+      "priority": 760,
+      "minScores": {
+        "readiness_for_processing": 5,
+        "trauma_activation": 5
+      },
+      "title": "You may be ready for focused trauma work",
+      "coreInsight": "You may benefit from a therapist who can work directly with traumatic memories and current triggers, not only offer supportive listening.",
+      "heardStatement": "Wanting structure does not mean you are impatient. It may mean you are ready for therapy with a clear method.",
+      "hiddenLearning": "The right trauma work should reduce trigger intensity and avoidance over time, not keep you circling the same story forever.",
+      "actions": [
+        "Look for EMDR, CPT, trauma-focused CBT, or Prolonged Exposure experience.",
+        "Ask the therapist: 'How do you decide when someone is ready for trauma processing?'",
+        "Ask for measurable goals: fewer avoidance behaviours, lower trigger intensity, better sleep, clearer narrative.",
+        "Avoid therapy that stays vague for months without a treatment plan."
+      ],
+      "therapistBrief": "I want focused trauma therapy, not only supportive counselling. I need help reducing trigger intensity and avoidance around the possibility of seeing this person.",
+      "therapyFocus": [
+        "EMDR",
+        "Cognitive Processing Therapy",
+        "Trauma-focused CBT",
+        "Prolonged Exposure"
+      ],
+      "resourceTags": [
+        "trauma",
+        "emdr",
+        "directory"
+      ]
+    },
+    {
+      "id": "avoidance_life_shrinking",
+      "priority": 740,
+      "minScores": {
+        "avoidance": 8
+      },
+      "title": "Avoidance may be quietly taking over",
+      "coreInsight": "Avoidance lowers anxiety short-term but teaches the brain that normal life is dangerous. The goal is a gradual return to freedom, not forcing a dramatic confrontation.",
+      "heardStatement": "Of course avoiding things can feel safer. But if the map of your life keeps shrinking, the coping strategy has become part of the problem.",
+      "hiddenLearning": "You do not need to be fearless. You need a repeatable way to move while afraid and recover afterwards.",
+      "actions": [
+        "Create an exposure ladder from easiest to hardest places or situations.",
+        "Start with low-risk routes or venues, paired with grounding and a planned exit.",
+        "Track confidence before and after each step.",
+        "Do not make the first exposure a place where seeing him is likely."
+      ],
+      "therapistBrief": "I need help with gradual exposure so my life stops shrinking around this fear.",
+      "therapyFocus": [
+        "Gradual exposure",
+        "Trauma-informed CBT",
+        "Grounding",
+        "Anxiety management"
+      ],
+      "resourceTags": [
+        "trauma",
+        "anxiety",
+        "directory"
+      ]
+    },
+    {
+      "id": "therapy_mismatch",
+      "priority": 720,
+      "minScores": {
+        "therapy_fit": 9
+      },
+      "title": "Current therapy may be too passive for this problem",
+      "coreInsight": "Feeling heard matters, but if the work lacks goals, tools, and progress markers, it may not be the right fit for this moment.",
+      "heardStatement": "You are allowed to want therapy that gives you something to do, not just somewhere to talk.",
+      "hiddenLearning": "The issue may not be that therapy does not work. It may be that this therapist's style is not structured enough for trauma plus ADHD plus relationship fallout.",
+      "actions": [
+        "Ask the current therapist directly for a treatment plan.",
+        "Use this prompt: 'Can we define goals, method, homework, and how we will know if this is working?'",
+        "If the therapist cannot answer clearly, seek a second opinion.",
+        "Look for someone who uses structured trauma methods rather than only open-ended reflection."
+      ],
+      "therapistBrief": "I am looking for therapy with goals, tools, structure, and trauma-specific methods.",
+      "therapyFocus": [
+        "Structured therapy",
+        "Trauma-specific methods",
+        "ADHD-friendly planning"
+      ],
+      "resourceTags": [
+        "directory",
+        "trauma",
+        "adhd"
+      ]
+    },
+    {
+      "id": "meaning_and_timeline",
+      "priority": 700,
+      "minScores": {
+        "unfinished_meaning": 8
+      },
+      "title": "The story still needs organising",
+      "coreInsight": "Your brain may be looping because the timeline, meaning, guilt, and responsibility are not organised clearly enough.",
+      "heardStatement": "Memory gaps and avoidance do not make you dishonest. But they do mean you need structure if you want clarity.",
+      "hiddenLearning": "The goal is not to produce a perfect legal transcript. It is to separate facts, fear, shame, assumptions, and present-day choices.",
+      "actions": [
+        "Build a private timeline with dates, facts, unknowns, emotions, and assumptions separated.",
+        "Use the categories: 'what I know', 'what I do not know', 'what I fear it means', and 'what I need now'.",
+        "Consider CPT or trauma-focused CBT if beliefs like shame, blame, danger, or trust are stuck.",
+        "For ADHD, make the timeline visual and update it slowly rather than trying to remember everything in one sitting."
+      ],
+      "therapistBrief": "I need help separating facts, memory gaps, shame, and meaning. I do not want to keep looping without structure.",
+      "therapyFocus": [
+        "Cognitive Processing Therapy",
+        "Trauma-focused CBT",
+        "Schema therapy",
+        "Narrative work"
+      ],
+      "resourceTags": [
+        "trauma",
+        "directory"
+      ]
+    },
+    {
+      "id": "relationship_repair_needed",
+      "priority": 690,
+      "minScores": {
+        "relationship_repair": 8
+      },
+      "title": "This is not only trauma; it is also relationship repair",
+      "coreInsight": "There are two issues here: his trauma response and the damage caused by secrecy or cheating. Treating only one will probably leave the other infected.",
+      "heardStatement": "Both truths can sit in the same room: you were affected by something painful, and your partner was affected by what you hid or did.",
+      "hiddenLearning": "Accountability and trauma care are not enemies. Done properly, they protect both people from becoming stuck in the same loop.",
+      "actions": [
+        "Separate individual trauma therapy from couples repair work.",
+        "Agree that therapy is not a shield against accountability.",
+        "Use a structured disclosure or repair conversation with a therapist if needed.",
+        "Current partner should avoid becoming detective, therapist, or probation officer."
+      ],
+      "therapistBrief": "I need individual support for trauma and a separate structure for repairing trust in my current relationship.",
+      "therapyFocus": [
+        "Couples therapy",
+        "Betrayal repair",
+        "Emotionally Focused Therapy",
+        "Gottman-informed therapy"
+      ],
+      "resourceTags": [
+        "couples",
+        "lgbtq",
+        "trauma"
+      ]
+    },
+    {
+      "id": "adhd_structure_needed",
+      "priority": 680,
+      "minScores": {
+        "adhd_support": 8
+      },
+      "title": "Therapy needs to be ADHD-friendly",
+      "coreInsight": "Insight alone may not stick. The therapy needs external structure, written memory supports, and simple next steps.",
+      "heardStatement": "If you lose the thread, you are not failing therapy. Therapy needs to meet your brain halfway.",
+      "hiddenLearning": "The more emotionally loaded the topic, the less you should rely on memory alone.",
+      "actions": [
+        "Ask for a written session summary after every session.",
+        "Use a shared therapy note with goals, homework, and key insights.",
+        "Keep homework tiny: one grounding exercise, one paragraph, one exposure step.",
+        "Review the previous session at the start of each appointment."
+      ],
+      "therapistBrief": "Because of ADHD, I need written structure, reminders, visual timelines, and clear homework. Otherwise I lose the thread.",
+      "therapyFocus": [
+        "ADHD-informed therapy",
+        "Structured CBT",
+        "Coaching-supported therapy",
+        "Written plans"
+      ],
+      "resourceTags": [
+        "adhd",
+        "directory"
+      ]
+    }
+  ],
+  "therapistScreeningQuestions": [
+    "What trauma-specific modalities are you trained in?",
+    "Do you work with EMDR, CPT, trauma-focused CBT, Prolonged Exposure, somatic trauma work, or DBT-informed stabilisation?",
+    "How do you decide whether to start with stabilisation or trauma processing?",
+    "Can we set goals and review progress every 4 to 6 sessions?",
+    "Can you provide written summaries or homework because I have ADHD?",
+    "Do you have experience with relational trauma, betrayal, shame, secrecy, or LGBTQ+ relationship dynamics if relevant?",
+    "What would a first-month treatment plan look like?",
+    "What should I do between sessions if I get triggered?",
+    "How do you handle avoidance and fear of accidental encounters?",
+    "When would you recommend couples therapy separately from individual trauma therapy?"
+  ],
+  "greenFlagsInTherapist": [
+    "They can explain their method clearly.",
+    "They offer a treatment plan, not just open-ended conversation.",
+    "They discuss stabilisation before trauma processing.",
+    "They are comfortable with ADHD-friendly structure.",
+    "They track goals and outcomes.",
+    "They do not pressure forgiveness, confrontation, or premature exposure.",
+    "They can separate trauma recovery from relationship accountability."
+  ],
+  "redFlagsInTherapist": [
+    "They say 'just avoid him' without helping reduce avoidance over time.",
+    "They push direct confrontation as closure.",
+    "They cannot name the trauma approaches they use.",
+    "They make therapy entirely theoretical with no tools or between-session plan.",
+    "They minimise cheating, secrecy, or trust repair because trauma is present.",
+    "They move into traumatic memories before the user has grounding and stabilisation skills."
+  ],
+  "resources": [
+    {
+      "name": "Samaritans of Singapore",
+      "type": "Crisis support",
+      "url": "https://www.sos.org.sg/contact-us/",
+      "tags": [
+        "crisis"
+      ],
+      "notes": "24-hour hotline 1767 and 24-hour CareText via WhatsApp at 9151 1767."
+    },
+    {
+      "name": "national mindline 1771",
+      "type": "Mental health navigation",
+      "url": "https://mindline.sg/1771",
+      "tags": [
+        "crisis",
+        "navigation"
+      ],
+      "notes": "Free, 24/7 mental health support in Singapore via call, WhatsApp, or text chat."
+    },
+    {
+      "name": "Singapore Association for Counselling - Registered Counsellor Directory",
+      "type": "Professional directory",
+      "url": "https://sacsingapore.org/registry/registered-counsellors/list-of-registered-counsellors/",
+      "tags": [
+        "directory"
+      ],
+      "notes": "Use this to verify Registered Counsellors in Singapore."
+    },
+    {
+      "name": "Singapore Psychological Society - Members Directory",
+      "type": "Professional directory",
+      "url": "https://singaporepsychologicalsociety.org/members-directory/",
+      "tags": [
+        "directory"
+      ],
+      "notes": "Use this to look for SPS members and SRP-Registered Psychologists."
+    },
+    {
+      "name": "Psychology Today Singapore - Trauma and PTSD therapists",
+      "type": "Therapist directory",
+      "url": "https://www.psychologytoday.com/sg/counselling/sg/singapore?category=trauma-and-ptsd",
+      "tags": [
+        "directory",
+        "trauma"
+      ],
+      "notes": "Directory filter for trauma and PTSD therapists in Singapore. Verify credentials directly."
+    },
+    {
+      "name": "Psychology Today Singapore - EMDR therapists",
+      "type": "Therapist directory",
+      "url": "https://www.psychologytoday.com/sg/counselling/sg/singapore?category=emdr",
+      "tags": [
+        "directory",
+        "emdr",
+        "trauma"
+      ],
+      "notes": "Directory filter for EMDR therapists in Singapore. Verify credentials directly."
+    },
+    {
+      "name": "Talk Your Heart Out - Trauma Therapy Singapore",
+      "type": "Therapy platform",
+      "url": "https://talkyourheartout.com/trauma-therapy-singapore/",
+      "tags": [
+        "trauma",
+        "emdr",
+        "anxiety",
+        "directory"
+      ],
+      "notes": "Lists trauma therapists and mentions approaches including EMDR, CBT, ACT, and brainspotting."
+    },
+    {
+      "name": "Restoring Peace Counselling - Trauma Therapy",
+      "type": "Trauma counselling",
+      "url": "https://www.restoringpeace.com.sg/trauma-therapy",
+      "tags": [
+        "trauma",
+        "emdr",
+        "anxiety"
+      ],
+      "notes": "Offers trauma-informed counselling and psychotherapy, including EMDR and related approaches."
+    },
+    {
+      "name": "Insightful Counselling - EMDR Therapy",
+      "type": "EMDR therapy",
+      "url": "https://insightfulcounselling.com/therapy/emdr-therapy",
+      "tags": [
+        "trauma",
+        "emdr"
+      ],
+      "notes": "EMDR-focused therapy page. Check therapist credentials and fit before booking."
+    },
+    {
+      "name": "Redwood Psychology - Trauma Therapy Singapore",
+      "type": "Psychology clinic",
+      "url": "https://www.redwoodpsy.com/trauma-therapy-singapore",
+      "tags": [
+        "trauma",
+        "emdr"
+      ],
+      "notes": "Mentions TF-CBT, EMDR, and CPT for trauma therapy."
+    },
+    {
+      "name": "Colourfully",
+      "type": "ADHD and trauma support",
+      "url": "https://www.colourfully.sg/",
+      "tags": [
+        "adhd",
+        "trauma",
+        "emdr"
+      ],
+      "notes": "Singapore-based online services focused on ADHD coaching, anxiety, trauma therapy, and EMDR."
+    },
+    {
+      "name": "New Leaf Counselling - Trauma Therapy",
+      "type": "Trauma counselling",
+      "url": "https://newleaf.com.sg/services/trauma-therapy-and-counselling/",
+      "tags": [
+        "trauma",
+        "emdr",
+        "anxiety"
+      ],
+      "notes": "Mentions EMDR, CBT, somatic therapy, and brainspotting."
+    },
+    {
+      "name": "Promises Healthcare - Trauma and PTSD Treatment",
+      "type": "Mental health clinic",
+      "url": "https://promises.com.sg/services/adult/trauma-ptsd-treatment/",
+      "tags": [
+        "trauma",
+        "emdr",
+        "anxiety"
+      ],
+      "notes": "Mentions CPT, EMDR, MEMI, and trauma-focused CBT."
+    },
+    {
+      "name": "Amity Trauma-Informed Practice",
+      "type": "Trauma-informed and couples therapy",
+      "url": "https://www.amitypractice.com.sg/",
+      "tags": [
+        "trauma",
+        "couples",
+        "emdr"
+      ],
+      "notes": "Lists individual therapy, couples therapy, EMDR, CBT, EFT, and family therapy."
+    },
+    {
+      "name": "North Ship Counselling",
+      "type": "Trauma-informed couples counselling",
+      "url": "https://www.northshipcouns.com/",
+      "tags": [
+        "couples",
+        "trauma",
+        "lgbtq"
+      ],
+      "notes": "Trauma-informed, non-judgemental, LGBTQ+ affirming, and mentions infidelity-related couples counselling."
+    },
+    {
+      "name": "Listening Ear Clinic - LGBTQIA+ Counselling",
+      "type": "LGBTQIA+ counselling",
+      "url": "https://listeningearclinic.com/lgbtq-counselling-singapore/",
+      "tags": [
+        "lgbtq",
+        "couples",
+        "trauma"
+      ],
+      "notes": "Queer-affirmative counselling page; check individual therapist fit."
+    }
+  ],
+  "finalOutputStyle": {
+    "openingLine": "Based on your answers, this does not look like you being dramatic or difficult. It looks like your system is trying to protect you, but the protection strategy may now be costing you freedom.",
+    "maxActionItems": 3,
+    "maxTherapistQuestions": 5,
+    "maxResources": 8
+  }
+}
